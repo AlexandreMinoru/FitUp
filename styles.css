@@ -1,0 +1,258 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #212121;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.header {
+    background-color: rgba(255, 255, 0, 0.87);
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 1rem;
+}
+.header h1 {
+    margin: 0;
+}
+.faixas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+.faixas h2 {
+    margin: 0;
+}
+.faixas p {
+    margin: 0;
+}
+
+
+.about{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: #ddd solid 1px;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.text h2, .text p{
+    color: white;
+    text-align: center;
+    margin: 10px;
+}
+
+.suplements{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.suplements h2, .suplements p{
+    color: white;
+    margin: 10px;
+    text-align: center;
+}
+.imageContainer{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    
+}
+img{
+    width: 70%;
+
+}
+
+ #linkSuplements{
+    color: yellow;
+    font-weight: bold;
+
+ }
+
+    #linkSuplements:hover {
+    color: #0056b3;
+ }
+
+.references{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: #ddd solid 1px ;
+}
+
+.title h2{
+    color: white;
+    margin: 10px;
+    text-align: center;
+}
+
+
+.imagesReferences{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.imagesReferences img{
+    width: 25%;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttonModal button{
+    background-color: yellow;
+    border-radius: 5px;
+    width: 5rem;
+    transition:  0.3s ease;
+}
+
+.buttonModal button:hover{
+    background-color: #0056b3;
+    cursor: pointer;
+    color: #ddd;
+}
+
+.myModal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    padding: 3rem;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+   
+}
+.modalContent{
+    background-color: lightgray;
+    border-radius: 1rem;
+    border: black solid 2px;
+    display: flex;
+    margin: auto;
+    width: 80%;
+    height: 80%;
+    flex-direction: column
+}
+
+.modalHeader{
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 10px;
+}
+
+.close{
+    font-weight: bold;
+    transition:  0.3s ease;
+}
+
+.close:hover{
+    color: red;
+    cursor: pointer;
+
+}
+
+.modalBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+
+}
+
+.inputArea{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 10px;
+}
+
+.inputArea input[type="email"]{
+    width: 90%;
+    
+}
+
+.inputArea textarea{
+    width: 100%;
+    height: 150%;
+    resize: none;
+}
+
+.buttonArea{
+    display: flex;
+
+    justify-content: center;
+}
+
+.buttonArea button{
+    background-color: yellow;
+    border-radius: 5px;
+    width: 5rem;
+    transition:  0.3s ease;
+}
+
+.buttonArea button:hover{
+    background-color: #0056b3;
+    cursor: pointer;
+    color: #ddd;
+}
+
+
+
+/* Add additional styling as needed */
+
+@media (max-width: 767px) {
+    .faixas{
+        flex-direction: column;
+    }
+    .about{
+        flex-direction: column;
+        align-items: center;
+    }
+    .myModal{
+        height: 50%;
+        width: 90%;
+    }
+    .imageContainer{
+        
+        width: 100%;
+        
+    }
+
+    .imagesReferences{
+        width: 120%;
+        justify-content: left;
+        gap: 1rem;
+    }
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 50%; opacity: 1}
+  }
